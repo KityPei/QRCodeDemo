@@ -13,7 +13,41 @@
 //  生成条形码
 
 + (UIImage *)generateBarCode:(NSString *)code size:(CGSize)size {
+    // 生成条形码
+    CIImage *barcodeImage;
+    NSData *data = [code dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+    CIFilter *filter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];// 创建过滤器
+    [filter setDefaults];// 恢复默认
     
+    [filter setValue:data forKey:@"inputMessage"];// 给过滤器添加数据,通过kvo设置滤镜inputMessage数据
+    barcodeImage = [filter outputImage];//  获取输出的条形码图片
+    
+    if (!barcodeImage) {
+        NSLog(@"生成条形码失败！");
+        return nil;
+    }
+    
+    // 调整图片比例，消除模糊
+    if (CGSizeEqualToSize(size, CGSizeZero)) {
+        size = CGSizeMake(320, 320.0 * barcodeImage.extent.size.height/barcodeImage.extent.size.width);
+    } else {
+        if (size.width > 3 * size.height) {
+            size = CGSizeMake(size.width, size.width*barcodeImage.extent.size.height/barcodeImage.extent.size.width);
+        } else {
+            size = CGSizeMake(size.height/(barcodeImage.extent.size.height/barcodeImage.extent.size.width), size.height);
+        }
+    }
+    
+    CGFloat scaleX = size.width/barcodeImage.extent.size.width;
+    CGFloat scaleY = size.height/barcodeImage.extent.size.height;
+    barcodeImage = [barcodeImage imageByApplyingTransform:CGAffineTransformScale(CGAffineTransformIdentity, scaleX, scaleY)];//按照比例缩放
+    
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef imageRef = [context createCGImage:barcodeImage fromRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *finalImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    return finalImage;
 }
 
 //  生成二维码
@@ -28,6 +62,11 @@
     [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
     
     qrcodeImage = [filter outputImage];//  获取输出的二维码图片
+    
+    if (!qrcodeImage) {
+        NSLog(@"生成二维码失败");
+        return nil;
+    }
     
     // 调整图片比例，消除模糊
     if(CGSizeEqualToSize(size, CGSizeZero)) {
@@ -48,9 +87,7 @@
     if (icon) {
         float scaleForIcon = 3.0f / (7.0f*3+1.0f*2);
         
-        
         UIImageView *imageV = [[UIImageView alloc] initWithImage:icon];
-        
         
         imageV.frame = CGRectMake((size.width*(1-scaleForIcon))/2, (size.width*(1-scaleForIcon))/2, size.width*scaleForIcon, size.width*scaleForIcon);
         
@@ -76,9 +113,6 @@
         finalImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
-    
-    
-    
     return finalImage;
 }
 

@@ -13,6 +13,7 @@
 /**
  *  生成条形码
  *
+ *  @param code 传入非文字字符串
  *  @param size 可以为CGRectZero
  *  @return 尺寸长宽比固定 (约3.2/1)
  */
@@ -21,6 +22,7 @@
 /**
  *  生成二维码
  *
+ *  @param code 传入字符串
  *  @param size 可以为CGRectZero
  *  @param icon logo图标 default nil
  *  @return 尺寸长宽比固定 (1/1)
