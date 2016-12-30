@@ -22,6 +22,14 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>1</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>2</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>3</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>4</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

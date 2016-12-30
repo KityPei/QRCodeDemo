@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QRCodeScanViewControllerDelegate <NSObject>
+
+- (void)QRCodeScanViewControllerDidGetCode:(NSString *)code;
+- (void)QRCodeScanViewControllerDidGetCodeForImage:(NSString *)code;
+
+@end
+
+
+
 @interface QRCodeScanViewController : UIViewController
+
+@property (weak, nonatomic) id <QRCodeScanViewControllerDelegate> delegate;
+
+- (void)pauseScan;
+- (void)continueScan;
+- (void)choicePhoto;
+
+
++ (BOOL)isTurnOnLED;
++ (void)turnLEDChangeState:(BOOL)on;
 
 @end
