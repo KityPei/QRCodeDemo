@@ -17,6 +17,12 @@
 		E51D71F61E13BDFB007E2096 /* QRCodeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D71F51E13BDFB007E2096 /* QRCodeDemoUITests.m */; };
 		E51D72081E13BF92007E2096 /* QRCodeGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D72071E13BF92007E2096 /* QRCodeGenerate.m */; };
 		E51D720B1E13BFBB007E2096 /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D720A1E13BFBB007E2096 /* QRCodeScanViewController.m */; };
+		E540B9BB1E16115000E60C9A /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E540B9B91E16115000E60C9A /* CreateViewController.m */; };
+		E540B9BC1E16115000E60C9A /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E540B9BA1E16115000E60C9A /* CreateViewController.xib */; };
+		E540B9C01E16116000E60C9A /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E540B9BE1E16116000E60C9A /* ManageViewController.m */; };
+		E540B9C11E16116000E60C9A /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E540B9BF1E16116000E60C9A /* ManageViewController.xib */; };
+		E540B9C51E16231200E60C9A /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E540B9C31E16231200E60C9A /* ResultViewController.m */; };
+		E540B9C61E16231200E60C9A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E540B9C41E16231200E60C9A /* ResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,15 @@
 		E51D72071E13BF92007E2096 /* QRCodeGenerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerate.m; sourceTree = "<group>"; };
 		E51D72091E13BFBB007E2096 /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
 		E51D720A1E13BFBB007E2096 /* QRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanViewController.m; sourceTree = "<group>"; };
+		E540B9B81E16115000E60C9A /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		E540B9B91E16115000E60C9A /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		E540B9BA1E16115000E60C9A /* CreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
+		E540B9BD1E16116000E60C9A /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
+		E540B9BE1E16116000E60C9A /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
+		E540B9BF1E16116000E60C9A /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
+		E540B9C21E16231200E60C9A /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		E540B9C31E16231200E60C9A /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		E540B9C41E16231200E60C9A /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +126,15 @@
 				E51D71D41E13BDFB007E2096 /* AppDelegate.m */,
 				E51D71D61E13BDFB007E2096 /* ViewController.h */,
 				E51D71D71E13BDFB007E2096 /* ViewController.m */,
+				E540B9B81E16115000E60C9A /* CreateViewController.h */,
+				E540B9B91E16115000E60C9A /* CreateViewController.m */,
+				E540B9BA1E16115000E60C9A /* CreateViewController.xib */,
+				E540B9BD1E16116000E60C9A /* ManageViewController.h */,
+				E540B9BE1E16116000E60C9A /* ManageViewController.m */,
+				E540B9BF1E16116000E60C9A /* ManageViewController.xib */,
+				E540B9C21E16231200E60C9A /* ResultViewController.h */,
+				E540B9C31E16231200E60C9A /* ResultViewController.m */,
+				E540B9C41E16231200E60C9A /* ResultViewController.xib */,
 				E51D72031E13BF03007E2096 /* QRCode */,
 				E51D71D91E13BDFB007E2096 /* Main.storyboard */,
 				E51D71DC1E13BDFB007E2096 /* Assets.xcassets */,
@@ -283,8 +307,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E540B9BC1E16115000E60C9A /* CreateViewController.xib in Resources */,
+				E540B9C61E16231200E60C9A /* ResultViewController.xib in Resources */,
 				E51D71E01E13BDFB007E2096 /* LaunchScreen.storyboard in Resources */,
 				E51D71DD1E13BDFB007E2096 /* Assets.xcassets in Resources */,
+				E540B9C11E16116000E60C9A /* ManageViewController.xib in Resources */,
 				E51D71DB1E13BDFB007E2096 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +339,12 @@
 			files = (
 				E51D72081E13BF92007E2096 /* QRCodeGenerate.m in Sources */,
 				E51D720B1E13BFBB007E2096 /* QRCodeScanViewController.m in Sources */,
+				E540B9BB1E16115000E60C9A /* CreateViewController.m in Sources */,
 				E51D71D81E13BDFB007E2096 /* ViewController.m in Sources */,
+				E540B9C01E16116000E60C9A /* ManageViewController.m in Sources */,
 				E51D71D51E13BDFB007E2096 /* AppDelegate.m in Sources */,
 				E51D71D21E13BDFB007E2096 /* main.m in Sources */,
+				E540B9C51E16231200E60C9A /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

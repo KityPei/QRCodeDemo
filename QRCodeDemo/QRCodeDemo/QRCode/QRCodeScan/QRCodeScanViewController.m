@@ -54,21 +54,22 @@ static CGFloat const animation_Duration = 0.05;
     
     [self.view addSubview:contentView];
     
+    
     //back
     UIView *viewTop = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreem.size.width, (UIScreem.size.height-220)/2)];
-    viewTop.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    viewTop.backgroundColor = [UIColor colorWithRed:51/255 green:51/255 blue:51/255 alpha:1];
     [self.view addSubview:viewTop];
     
     UIView *viewBottom = [[UIView alloc] initWithFrame:CGRectMake(0, (UIScreem.size.height-220)/2+220, UIScreem.size.width, (UIScreem.size.height-220)/2)];
-    viewBottom.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    viewBottom.backgroundColor = [UIColor colorWithRed:51/255 green:51/255 blue:51/255 alpha:1];
     [self.view addSubview:viewBottom];
     
     UIView *viewLeft = [[UIView alloc] initWithFrame:CGRectMake(0, (UIScreem.size.height-220)/2, (UIScreem.size.width-220)/2, 220)];
-    viewLeft.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    viewLeft.backgroundColor = [UIColor colorWithRed:51/255 green:51/255 blue:51/255 alpha:1];
     [self.view addSubview:viewLeft];
     
     UIView *viewRight = [[UIView alloc] initWithFrame:CGRectMake((UIScreem.size.width-220)/2+220, (UIScreem.size.height-220)/2, (UIScreem.size.width-220)/2, 220)];
-    viewRight.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    viewRight.backgroundColor = [UIColor colorWithRed:51/255 green:51/255 blue:51/255 alpha:1];
     [self.view addSubview:viewRight];
     
     _loadingView = [[UIView alloc] initWithFrame:UIScreem];
